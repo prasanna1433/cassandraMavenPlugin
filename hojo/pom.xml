@@ -79,6 +79,8 @@
                 </executions>
                 <configuration>
                     <skip>false</skip>
+                    <startNativeTransport>true</startNativeTransport>
+                    <nativeTransportPort>9042</nativeTransportPort>
                 </configuration>
             </plugin>
         </plugins>

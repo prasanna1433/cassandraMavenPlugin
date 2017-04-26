@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="CassandraTest" time="0.702" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="CassandraTest" time="0.639" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
@@ -62,8 +62,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|walmart.com|*.walmart.com|wal-mart.com|*.wal-mart.com|homeoffice.wal-mart.com|*.homeoffice.wal-mart.com"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="CassandraTest" name="generateMessages1" time="0.702">
-    <error message="All host(s) tried for query failed (tried: localhost/0:0:0:0:0:0:0:1:9042 (com.datastax.driver.core.TransportException: [localhost/0:0:0:0:0:0:0:1:9042] Cannot connect), localhost/127.0.0.1:9042 (com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect))" type="com.datastax.driver.core.exceptions.NoHostAvailableException">com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/0:0:0:0:0:0:0:1:9042 (com.datastax.driver.core.TransportException: [localhost/0:0:0:0:0:0:0:1:9042] Cannot connect), localhost/127.0.0.1:9042 (com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect))
+  <testcase classname="CassandraTest" name="generateMessages1" time="0.639">
+    <error message="All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces), localhost/0:0:0:0:0:0:0:1:9042 (com.datastax.driver.core.TransportException: [localhost/0:0:0:0:0:0:0:1:9042] Cannot connect))" type="com.datastax.driver.core.exceptions.NoHostAvailableException">com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/127.0.0.1:9042 (com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table schema_keyspaces), localhost/0:0:0:0:0:0:0:1:9042 (com.datastax.driver.core.TransportException: [localhost/0:0:0:0:0:0:0:1:9042] Cannot connect))
 	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240)
 	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86)
 	at com.datastax.driver.core.Cluster$Manager.init(Cluster.java:1455)
