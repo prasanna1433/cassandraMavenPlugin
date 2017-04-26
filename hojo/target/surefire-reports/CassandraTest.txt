@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: CassandraTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.428 sec <<< FAILURE!
-generateMessages1(CassandraTest)  Time elapsed: 0.392 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.778 sec <<< FAILURE!
+generateMessages1(CassandraTest)  Time elapsed: 0.702 sec  <<< ERROR!
 com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: localhost/0:0:0:0:0:0:0:1:9042 (com.datastax.driver.core.TransportException: [localhost/0:0:0:0:0:0:0:1:9042] Cannot connect), localhost/127.0.0.1:9042 (com.datastax.driver.core.TransportException: [localhost/127.0.0.1:9042] Cannot connect))
 	at com.datastax.driver.core.ControlConnection.reconnectInternal(ControlConnection.java:240)
 	at com.datastax.driver.core.ControlConnection.connect(ControlConnection.java:86)
