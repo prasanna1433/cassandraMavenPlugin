@@ -24,7 +24,7 @@
         <dependency>
             <groupId>com.datastax.cassandra</groupId>
             <artifactId>cassandra-driver-core</artifactId>
-            <version>2.1.10.3</version>
+            <version>2.1.7</version>
             <exclusions>
                 <!--exclusion>
                     <artifactId>slf4j-api</artifactId>
@@ -44,44 +44,18 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cassandra-maven-plugin</artifactId>
                 <version>3.5</version>
-                <executions>
-                    <execution>
-                        <id>delete-cassandra</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>delete</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>start-cassandra</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>start</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>init-cassandra</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>cql-exec</goal>
-                        </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>stop-cassandra</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>stop</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <skip>false</skip>
                     <startNativeTransport>true</startNativeTransport>
                     <nativeTransportPort>9042</nativeTransportPort>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.cassandra</groupId>
+                        <artifactId>cassandra-all</artifactId>
+                        <version>3.5</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
